@@ -13,8 +13,8 @@ const input = document.getElementById("input");
       e.preventDefault();
       const todoText = input.value;
       const todoEl = `<li class="item"><p class="text">${todoText}</p>
-      <button class="delete" id="deleteTodoButton"><i class="far fa-trash-alt"></i>Delete</button>
-      <button class="complete" id="completeTodoButton"><i class="fas fa-check"></i>Completed</button>   
+      <button class="delete button" id="deleteTodoButton"><i class="far fa-trash-alt"></i>Delete</button>
+      <button class="complete button" id="completeTodoButton"><i class="fas fa-check"></i>Completed</button>   
       </li>`;
       input.value = "";
       input.focus();

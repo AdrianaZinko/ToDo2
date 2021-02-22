@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 body{
@@ -55,10 +55,12 @@ h1{
     display: flex;
     justify-content: space-between;
    padding: 8px 5px;
+   height: 45px;
+   
 }
 
 .item:nth-child(odd){
-    background-color: rgb(177, 169, 169);
+    background-color: #fff;
 }
 
 .item:nth-child(even){
@@ -68,4 +70,23 @@ h1{
 .text{
     min-width: 50%;
     width: 100%;
+}
+
+.button{
+    width: 15%;
+}
+
+.button+ .button{
+margin-left: 15px;
+}
+
+
+@media (max-width: 600px){
+    .container {
+        width: 96%; 
+    }
+    
+.button+ .button{
+    margin-left: 0;
+    }
 }
