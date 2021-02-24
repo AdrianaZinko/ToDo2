@@ -1,92 +1,109 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: aqua;
+body {
+  background-color: aqua;
 }
 
-.container{
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-  }
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .completed {
-    text-decoration: line-through;
+  padding-left: 17px;
+  text-decoration: line-through;
+  position: relative;
+}
+.completed::before {
+  content: '\2713';
+  position: absolute;
+  font-weight: 900;
+  left: 0;
+  width: 15px;
+  height: 20px;
+}
+h1 {
+  text-align: center;
+  margin: 40px 0;
 }
 
-h1{
-    text-align: center;
-    margin: 40px 0;
+#form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-#form{
-    width: 100%; 
-    display: flex;
-    justify-content: space-between;
+.input {
+  width: 60%;
+  height: 40px;
+  padding: 5px;
 }
 
-.input{
-    width: 60%;
-    height: 40px;
-    padding: 5px;
+.btn {
+  width: 15%;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
 }
 
-.btn{
-    width: 15%;
+.filter-todos {
+  width: 20%;
 }
 
-.filter-todos{
-    width: 20%;
+#todoUL {
+  margin-top: 20px;
 }
 
-#todoUL{
-    margin-top: 20px;
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+  min-height: 45px;
+  height: 100%;
 }
 
-.item{
-    display: flex;
-    justify-content: space-between;
-   padding: 8px 5px;
-   height: 45px;
-   
+.item:nth-child(odd) {
+  background-color: #fff;
 }
 
-.item:nth-child(odd){
-    background-color: #fff;
+.item:nth-child(even) {
+  background-color: rgb(131, 205, 235);
 }
 
-.item:nth-child(even){
-    background-color: rgb(131, 205, 235);
+.text {
+  min-width: 50%;
+  width: 100%;
 }
 
-.text{
-    min-width: 50%;
-    width: 100%;
+.button {
+  width: 11%;
+  height: 100%;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: 900;
 }
 
-.button{
-    width: 15%;
+.button + .button {
+  margin-left: 15px;
 }
 
-.button+ .button{
-margin-left: 15px;
-}
+@media (max-width: 600px) {
+  .container {
+    width: 96%;
+  }
 
-
-@media (max-width: 600px){
-    .container {
-        width: 96%; 
-    }
-    
-.button+ .button{
-    margin-left: 0;
-    }
+  .button + .button {
+    margin-left: 4px;
+  }
 }

@@ -2,13 +2,14 @@ const input = document.getElementById('input');
 const addTodoButton = document.getElementById('addTodoButton');
 const todoUL = document.getElementById('todoUL');
 const filterOptions = document.querySelector('.filter-todos');
+
 // Add todo
 function addTodo(e) {
   e.preventDefault();
   const todoText = input.value;
   const todoEl = `<li class="item"><p class="text">${todoText}</p>
-      <button class="delete button" id="deleteTodoButton"><i class="far fa-trash-alt"></i>Delete</button>
-      <button class="complete button" id="completeTodoButton"><i class="fas fa-check"></i>Completed</button>   
+      <button class="delete button" id="deleteTodoButton">&#10006;</button>
+      <button class="complete button" id="completeTodoButton">&#10004;</button>   
       </li>`;
   input.value = '';
   input.focus();
@@ -29,6 +30,7 @@ function remove(e) {
     e.target.previousElementSibling.previousElementSibling.classList.toggle(
       'completed'
     );
+
     input.focus();
   }
 }
